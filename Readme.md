@@ -1,4 +1,12 @@
-# Commands
+# Commands to start
+
+## KUBEAPPS Documentation
+
+<https://kubeapps.dev/docs/latest/tutorials/getting-started/>
+
+## minikube Documentation
+
+<https://minikube.sigs.k8s.io/docs/start/>
 
 ## Guides to installed Minikube and started a local Kubernetes cluster
 
@@ -82,4 +90,47 @@ kubectl apply -f my-secret.yaml
 ```bash
 kubectl get secrets
 kubectl describe secret my-secret
+```
+
+## ReplicaSets and Deployments
+
+### Apply the ReplicaSet definition
+
+```bash
+kubectl apply -f my-replicaset.yaml
+```
+
+```bash
+kubectl get replicasets
+kubectl get pods
+```
+
+```bash
+kubectl apply -f my-deployment.yaml
+```
+
+```bash
+kubectl get deployments
+kubectl get pods
+```
+
+## Ingress
+
+### Apply the Ingress definition
+
+```bash
+kubectl apply -f my-ingress.yaml
+```
+
+### Check the status of the Ingress
+
+```bash
+kubectl get ingresses
+
+```
+
+### To test the Ingress, update your local /etc/hosts file to map my-ingress.local to the Minikube IP
+
+```bash
+sudo echo "$(minikube ip) my-ingress.local" >> /etc/hosts
 ```
