@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap
+data:
+  DATABASE_URL: "postgres://user:password@mydbhost:5432/mydatabase"
+  API_KEY: "my-api-key"
